@@ -1,0 +1,254 @@
+/* Reset and basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* === Header Navbar === */
+header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  z-index: 1000;
+  background: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* === Dark Mode Toggle Switch === */
+.switch {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 1000;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* === Dark Mode Toggle Container === */
+.dark-mode-toggle {
+  position: fixed;
+  top: 0px;
+  right: 5px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center; /* center horizontally */
+  gap: 30px; /* less gap between toggle and text */
+  background: transparent;
+}
+
+.switch {
+  position: relative; /* Key */
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+/* === Dark Mode Label === */
+.dark-mode-label {
+  font-size: 1rem;
+  color: #000;
+}
+
+/* === Contact Page Background === */
+.contact-body {
+  height: 100vh;
+  background: url('images/contact_background.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px; /* so the fixed nav doesn't overlap the box */
+}
+
+/* === Contact Box Centered === */
+.contact-box {
+  background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+/* === Contact Box Text === */
+.contact-box h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.contact-box p {
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-size: 1em;
+  color: #333;
+}
+
+/* === Contact Form === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+}
+
+/* Textarea full width */
+.form-row textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+/* === Submit Button === */
+button[type="submit"] {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #333;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* === Footer Social Links Centered at Bottom === */
+footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  font-size: 1em;
+  z-index: 1000;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
