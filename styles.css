@@ -17,7 +17,15 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(
+    to bottom, 
+    rgba(255, 255, 255, 0.95) 0%,   
+    rgba(255, 255, 255, 0.8) 20%,   
+    rgba(255, 255, 255, 0.6) 40%,    
+    rgba(255, 255, 255, 0.3) 60%,   
+    rgba(255, 255, 255, 0) 100%   
+  );
+  justify-content: center;
   z-index: 1000;
 }
 
@@ -111,6 +119,7 @@ input:checked+.slider:before {
 }
 
 .dark-mode-label {
+  font-weight: 800;
   font-size: 1rem;
   color: #000;
 }
@@ -121,7 +130,14 @@ input:checked+.slider:before {
   bottom: 0;
   width: 100%;
   height: 80px;
-  background: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(
+    to top, 
+    rgba(255, 255, 255, 0.95) 0%,   
+    rgba(255, 255, 255, 0.8) 20%,   
+    rgba(255, 255, 255, 0.6) 40%,    
+    rgba(255, 255, 255, 0.3) 60%,   
+    rgba(255, 255, 255, 0) 100%    
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,10 +147,20 @@ input:checked+.slider:before {
 }
 
 .fixed-footer a {
-  text-decoration: none;
-  color: #000;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;     
+  color: #fff;                 
   font-weight: bold;
-  position: relative;
+  text-decoration: none;
+  font-size: 0.8em;
+  border-radius: 5px;          
+  transition: all 0.3s ease;     
+}
+
+.fixed-footer a:hover {
+  background-color: #f0f0f0;     
+  color: #000;                    
 }
 
 .fixed-footer a::after {
@@ -184,12 +210,21 @@ input:checked+.slider:before {
 }
 
 .home-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-family: 'Homemade Apple', serif;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.home-text h3 {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
   font-weight: 600;
 }
 
 .home-text p {
+  font-family: 'Prata", serif';
   font-size: 1.1rem;
   line-height: 1.9;
   color: #333;
@@ -230,18 +265,21 @@ input:checked+.slider:before {
 }
 
 .about-title {
+  font-family: 'Homemade Apple', serif;
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .intro-section {
-  margin: 0 auto 60px;
+  font-family: 'Prata", serif';
+  margin: 0 auto 30px;
   max-width: 1200px;
 }
 
 .about-section {
+  font-family: 'Prata", serif';
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -282,6 +320,7 @@ input:checked+.slider:before {
 }
 
 .resume-title {
+  font-family: 'Homemade Apple', serif;
   text-align: center;
   font-size: 2.5rem;
   margin: 60px 0 40px;
@@ -318,6 +357,46 @@ input:checked+.slider:before {
   gap: 60px 120px;
 }
 
+.resume-education .resume-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px; 
+}
+
+.coursework-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  margin-top: 10px;
+  font-family: 'Prata", serif';
+  font-size: 0.95rem;
+}
+
+.coursework-grid div {
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.coursework-grid div::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #666;
+}
+
+.resume-item h4 {
+  margin-top: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Prata", serif';
+  letter-spacing: 1px;
+  color: #333;
+}
+
+body.dark-mode .resume-item h4 {
+  color: #fff;
+}
+
 /* Individual Item */
 .resume-item {
   padding: 20px;
@@ -333,8 +412,10 @@ input:checked+.slider:before {
 }
 
 .resume-date {
+  font-family: 'Prata", serif';
   text-align: left;
   font-weight: normal;
+  font-style: italic;
 }
 
 .resume-company {
@@ -349,12 +430,6 @@ input:checked+.slider:before {
   margin-bottom: 5px;
 }
 
-.resume-item h3 {
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: right;
-}
-
 .resume-item hr {
   margin: 10px 0;
   border: none;
@@ -362,12 +437,15 @@ input:checked+.slider:before {
 }
 
 .resume-item p {
+  font-family: 'Prata", serif';
   font-size: 1rem;
   line-height: 1.6;
 }
 
 /* Skills Text */
 .resume-skills p {
+  text-align: center;
+  font-family: 'Prata", serif';
   font-size: 1.1rem;
   margin-bottom: 10px;
 }
@@ -424,6 +502,17 @@ hr {
   padding: 100px 20px 100px;
 }
 
+/* Contact Page Background */
+.contact-main {
+  min-height: 100vh;
+  background: url('images/contact_me_background.JPG') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 20px 100px;
+}
+
 .contact-box {
   background: #ffffff;
   padding: 50px 40px;
@@ -435,13 +524,15 @@ hr {
 }
 
 .contact-box h1 {
+  font-family: 'Homemade Apple', serif;
   margin-bottom: 20px;
   font-size: 2.2em;
 }
 
 .contact-box p {
-  margin-bottom: 40px;
-  font-size: 1rem;
+  font-family: 'Prata", serif';
+  margin-bottom: 50px;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
 }
@@ -465,6 +556,7 @@ hr {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  font-family: 'Prata", serif';
   font-size: 1rem;
 }
 
@@ -477,6 +569,7 @@ button[type="submit"] {
   margin-top: 20px;
   padding: 15px;
   font-size: 1rem;
+  font-weight: bold;
   background: #333;
   color: #fff;
   border: none;
@@ -490,11 +583,32 @@ button[type="submit"]:hover {
 }
 
 /* === Dark Mode === */
-body.dark-mode,
-body.dark-mode .fixed-header,
-body.dark-mode .fixed-footer {
+body.dark-mode {
   background-color: #1f1f1f;
   color: #ffffff;
+}
+
+body.dark-mode .fixed-footer {
+  background: linear-gradient(
+    to top, 
+    #1f1f1f 0%,      
+    rgba(31, 31, 31, 0.95) 20%,  
+    rgba(31, 31, 31, 0.7) 40%,  
+    rgba(31, 31, 31, 0.4) 60%,  
+    rgba(31, 31, 31, 0) 100%    
+  );
+  color: #ffffff;
+}
+
+body.dark-mode .fixed-header {
+  background: linear-gradient(
+    to bottom, 
+    rgba(31, 31, 31, 0.95) 0%,   
+    rgba(31, 31, 31, 0.8) 20%,   
+    rgba(31, 31, 31, 0.6) 40%,    
+    rgba(31, 31, 31, 0.3) 60%,   
+    rgba(31, 31, 31, 0) 100%    
+  );
 }
 
 /* General Background for all pages */
@@ -510,7 +624,6 @@ body.dark-mode .home-text p,
 body.dark-mode .about-title,
 body.dark-mode .intro-text p,
 body.dark-mode .about-text p,
-body.dark-mode .fixed-footer a,
 body.dark-mode .contact-box h1,
 body.dark-mode .contact-box p,
 body.dark-mode .resume-title,
@@ -522,6 +635,16 @@ body.dark-mode .project-title h2,
 body.dark-mode .project-title p,
 body.dark-mode .project-description li {
   color: #ffffff;
+}
+
+body.dark-mode .fixed-footer a {
+  background-color: #333;          /* dark hover */
+  color: #fff;                     /* white text on hover */
+}
+
+body.dark-mode .fixed-footer a:hover {
+  background-color: #fff;       /* white button on hover */
+  color: #000;                  /* black text on hover */
 }
 
 /* Underline hover effect in dark mode */
@@ -549,27 +672,38 @@ body.dark-mode button[type="submit"] {
   color: #ffffff;
 }
 
+/* Dark Mode Submit Button Hover */
 body.dark-mode button[type="submit"]:hover {
   background-color: #555;
 }
 
+/* Dark Mode Connect Button */
 body.dark-mode .connect-button {
   background-color: #555;
   color: #fff;
 }
 
+/* Dark mode connect button hover */
 body.dark-mode .connect-button:hover {
   background-color: #777;
 }
 
-/* Resume Section Background */
-body.dark-mode .resume-section {
-  background-color: #2b2b2b;
+/* Dark mode nav link hover */
+body.dark-mode .nav-links li a:hover {
+  background-color: #ffffff; /* Light background */
+  color: #000000; /* Black text */
 }
 
-/* Resume Items Backgrounds */
+/* Active nav link in dark mode */
+body.dark-mode .nav-links li a.active {
+  background-color: #555; /* A dark gray */
+  color: #ffffff; /* White text */
+}
+
+/* Resume Section Background */
+body.dark-mode .resume-section,
 body.dark-mode .resume-item {
-  background: #242424;
+  background-color: #2b2b2b;
 }
 
 /* Divider Line */
