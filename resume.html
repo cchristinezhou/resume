@@ -1,38 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume | Your Name</title>
+  <title>Resume | Christine Zhou</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
+  <header class="fixed-header">
+    <nav class="navbar">
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button id="dark-mode-toggle">Dark Mode</button>
+
+      <div class="dark-mode-toggle">
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider round"></span>
+        </label>
+        <span class="dark-mode-label">Dark Mode</span>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Resume</h1>
-    <p>Here's my work history and skills.</p>
-    <!-- Optional: Downloadable Resume -->
-    <a href="your-resume.pdf" download>Download Resume (PDF)</a>
+  <main class="resume-main">
+    <h1 class="resume-title">Professional Experience</h1>
+
+    <div class="resume-section resume-experience">
+      <div class="resume-grid">
+
+        <div class="resume-item">
+          <h2>Software Engineer II</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Spring 2022 – Spring 2025</span>
+            <span class="resume-company">Microsoft</span>
+          </div>
+          <hr>
+          <p>Worked on Microsoft Teams iOS, focusing on Communities features in Swift and Objective-C. Shipped a
+            location-sharing feature to production, collaborated closely with PMs, designers, and engineers. Led team
+            hackathons and delivered product demos to leadership. Developed prototypes with SwiftUI and enhanced
+            existing UIKit codebases. Improved testing coverage and monitored production issues via telemetry.</p>
+        </div>
+
+        <div class="resume-item">
+          <h2>Software Engineer Intern</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Summer 2021</span>
+            <span class="resume-company">Microsoft</span>
+          </div>
+          <hr>
+          <p>Created a location-sharing feature for Microsoft Teams, increasing user interaction between mobile and
+            desktop apps by 20%. Developed a Location tab for live location sharing, leading accessibility and
+            scalability testing, improving app usability scores.</p>
+        </div>
+
+        <div class="resume-item">
+          <h2>UI/UX Designer</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Dec 2020 – Jan 2021</span>
+            <span class="resume-company">Airsip, Inc.</span>
+          </div>
+          <hr>
+          <p>Designed user interfaces for a video Q&A platform targeting students. Conducted user research, usability
+            testing, and created Figma prototypes. Helped Airsip become a top 50 startup globally in the Pioneer
+            competition and reach YC interviews.</p>
+        </div>
+
+        <div class="resume-item">
+          <h2>UI/UX Designer & Cofounder</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Summer 2020</span>
+            <span class="resume-company">Ripple - Meet, Chat, Hang Out, Inc.</span>
+          </div>
+          <hr>
+          <p>Co-founded a Vanderbilt campus app to facilitate social connections among students. Designed intuitive user
+            flows and led user research to iterate designs rapidly. Increased app downloads by 15% and user retention by
+            22% through improved onboarding and visual design enhancements.</p>
+        </div>
+
+        <div class="resume-item">
+          <h2>Machine Learning Verification Lab Intern</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Summer 2020</span>
+            <span class="resume-company">Vanderbilt Institute for Software Integrated Systems</span>
+          </div>
+          <hr>
+          <p>Worked on machine learning verification research. Created scripts in MATLAB to benchmark CNNs on MNIST and
+            CIFAR datasets. Developed algorithms to identify perturbation vulnerabilities in classification models,
+            supporting lab publications in ML safety.</p>
+        </div>
+
+        <div class="resume-item">
+          <h2>Teaching Assistant</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Jan 2020 – Dec 2021</span>
+            <span class="resume-company">Vanderbilt University</span>
+          </div>
+          <hr>
+          <p>TA for undergraduate courses including CS1101 (Programming) and CS2201 (Data Structures). Led weekly labs,
+            graded programming assignments, and hosted 600+ hours of office hours. Supported 100+ students per semester
+            in understanding object-oriented programming and algorithm design.</p>
+        </div>
+
+        <div class="resume-item">
+          <h2>Data Science Research Assistant Intern</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Aug 2019 – Mar 2020</span>
+            <span class="resume-company">Very Real Help, Inc.</span>
+          </div>
+          <hr>
+          <p>Developed an NLP model in Python to predict rehab success rates based on therapy session transcripts.
+            Conducted competitive research and usability studies for VR mental health apps, informing design
+            improvements and product strategy.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <h1 class="resume-title">Education</h1>
+
+    <div class="resume-section resume-education">
+      <div class="resume-grid">
+
+        <div class="resume-item">
+          <h2>M.S. Computer Science (Machine Learning Focus)</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Spring 2025 – Fall 2025</span>
+            <span class="resume-company">Northeastern University</span>
+          </div>
+          <hr>
+          <p>GPA: 4.0/4.0<br>Expected Graduation: Dec 2025<br>Relevant Coursework: Machine Learning, NLP, Mobile App
+            Development, Computer Vision, Web Development, Distributed Systems.</p>
+        </div>
+
+        <div class="resume-item">
+          <h2>B.S. Computer Science & Applied Mathematics</h2>
+          <div class="resume-meta">
+            <span class="resume-date">Fall 2018 – Spring 2021</span>
+            <span class="resume-company">Vanderbilt University</span>
+          </div>
+          <hr>
+          <p>Graduated Cum Laude<br>GPA: 3.875/4.0<br>Major GPA: 3.935 (CS), 4.0 (Math)<br>Minors: Neuroscience</p>
+        </div>
+
+      </div>
+    </div>
+
+    <h1 class="resume-title">Skills</h1>
+
+    <div class="resume-skills">
+      <p><strong>Languages:</strong> Swift, Objective-C, Python, Java, C++, JavaScript, TypeScript, HTML5, CSS, MATLAB.
+      </p>
+      <p><strong>Frameworks:</strong> SwiftUI, UIKit, ReactJS, Node.js, TensorFlow.</p>
+      <p><strong>Tools:</strong> Figma, Xcode, VS Code, Git, Jira, Sketch, Adobe Illustrator, Photoshop.</p>
+    </div>
   </main>
 
-  <footer>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://github.com" target="_blank">GitHub</a>
+  <footer class="fixed-footer">
+    <a href="https://www.linkedin.com/in/siqi-christine-z-862b88119/" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/itschristinezhou/" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/@christinezhou" target="_blank">YouTube</a>
+    <a href="https://github.com/cchristinezhou" target="_blank">GitHub</a>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

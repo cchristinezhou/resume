@@ -1,49 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Your Name</title>
+  <title>Projects | Christine Zhou</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
+  <header class="fixed-header">
+    <nav class="navbar">
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button id="dark-mode-toggle">Dark Mode</button>
+
+      <div class="dark-mode-toggle">
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider round"></span>
+        </label>
+        <span class="dark-mode-label">Dark Mode</span>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>Projects</h1>
-    <div class="project-list">
-      <div class="project">
-        <h2>Project 1</h2>
-        <p>Short description of Project 1.</p>
+  <main class="projects-main">
+    <div class="projects-section">
+
+      <div class="project-item">
+        <div class="project-title">
+          <h2>Transpose X</h2>
+          <p>Mobile Application for Musicians</p>
+        </div>
+        <div class="project-description">
+          <ul>
+            <li>Spearheaded the design and development of a mobile app that intelligently transposes sheet music into
+              any desired key, assisting musicians with diverse performance needs.</li>
+            <li>Engineered real-time key detection and transposition algorithms to ensure seamless, lag-free user
+              experience.</li>
+            <li>Built entirely in Dart and Flutter, with a sleek, intuitive UI optimized for both iOS and Android
+              platforms.</li>
+            <li>Achieved high usability ratings in user testing, with a focus on simplifying a traditionally manual
+              process for musicians.</li>
+          </ul>
+        </div>
       </div>
-      <div class="project">
-        <h2>Project 2</h2>
-        <p>Short description of Project 2.</p>
+
+      <hr>
+
+      <div class="project-item">
+        <div class="project-title">
+          <h2>Go Doggie</h2>
+          <p>Augmented Reality Dog-Walking Simulation</p>
+        </div>
+        <div class="project-description">
+          <ul>
+            <li>Designed and developed an innovative AR mobile app offering users an immersive dog-walking experience,
+              inspired by mechanics similar to Pokémon Go.</li>
+            <li>Conducted comprehensive user interviews and market research to identify pain points and refine feature
+              prioritization.</li>
+            <li>Led the creation of interactive UI wireframes, high-fidelity prototypes, and polished mockups,
+              significantly enhancing user engagement.</li>
+            <li>Focused on combining gamification with physical activity to promote healthy habits through technology.
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="project">
-        <h2>Project 3</h2>
-        <p>Short description of Project 3.</p>
+
+      <hr>
+
+      <div class="project-item">
+        <div class="project-title">
+          <h2>Do Not Get Run Over</h2>
+          <p>Virtual Reality Road-Crossing Simulation Game</p>
+        </div>
+        <div class="project-description">
+          <ul>
+            <li>Developed a VR-based simulation game in Unity, educating users on safe road-crossing practices in a
+              dynamic, interactive environment.</li>
+            <li>Designed game mechanics to balance realism and engagement, leading to high levels of user immersion and
+              repeat play.</li>
+            <li>Conducted iterative playtesting and incorporated feedback to enhance gameplay experience and improve
+              player retention.</li>
+            <li>Earned positive reviews from peers and users for innovation and usability.</li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </main>
 
-  <footer>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://github.com" target="_blank">GitHub</a>
+  <footer class="fixed-footer">
+    <a href="https://www.linkedin.com/in/siqi-christine-z-862b88119/" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/itschristinezhou/" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/@christinezhou" target="_blank">YouTube</a>
+    <a href="https://github.com/cchristinezhou" target="_blank">GitHub</a>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

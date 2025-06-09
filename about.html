@@ -1,51 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Your Name</title>
+  <title>About | Christine Zhou</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
+  <header class="fixed-header">
+    <nav class="navbar">
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button id="dark-mode-toggle">Dark Mode</button>
+
+      <!-- Dark Mode Toggle -->
+      <div class="dark-mode-toggle">
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider round"></span>
+        </label>
+        <span class="dark-mode-label">Dark Mode</span>
+      </div>
     </nav>
   </header>
 
-  <main class="contact-page">
-    <h1>Contact Me</h1>
-    <p>Feel free to reach out for any inquiries, collaborations, or opportunities. I am open to discussing how my skills and experience can contribute to your projects.</p>
+  <main class="about-main">
+    <!-- Page Title -->
+    <h1 class="about-title">About Me</h1>
 
-    <form action="#" method="POST" class="contact-form">
-      <div class="form-row">
-        <input type="text" name="first-name" placeholder="First name *" required>
-        <input type="text" name="last-name" placeholder="Last name *" required>
+    <!-- Full Width Intro -->
+    <section class="intro-section">
+      <div class="intro-text">
+        <p>From a young age, I was naturally drawn to math and problem solving — the thrill of cracking a tough problem
+          always excited me.</p>
+        <p>When I started college at Vanderbilt University, my path seemed certain: pre-med. Yet, life has a funny way
+          of redirecting us. To fulfill a basic liberal arts requirement, I enrolled in CS 1101, an introductory
+          programming course in Java.</p>
+        <p>What I expected to be a simple box-checking exercise turned into something much more. Programming came
+          incredibly naturally to me — a surprising discovery, especially since growing up, I never imagined myself in
+          tech. In my mind, software engineering was reserved for “geeks,” and I wasn’t sure I fit that mold. But as the
+          semester unfolded, I realized this wasn’t about stereotypes or labels — it was about problem-solving,
+          creativity, and building something from scratch, all things I loved.</p>
       </div>
-      <div class="form-row">
-        <input type="email" name="email" placeholder="Email *" required>
-        <input type="tel" name="phone" placeholder="Phone">
+    </section>
+
+    <!-- Left Image / Right Text Section -->
+    <section class="about-section">
+      <div class="about-image">
+        <img src="images/vr_lab.jpg" alt="Photo of me working in a VR lab">
       </div>
-      <div class="form-row">
-        <textarea name="message" placeholder="Message *" rows="5" required></textarea>
+      <div class="about-text">
+        <p>Alongside my coursework, I worked in several research labs focused on the intersection of medicine and
+          technology. One of the projects that shaped my interests most was a virtual reality-based community designed
+          to help individuals manage substance addiction. Our goal was to create immersive environments to curb cravings
+          and promote recovery.</p>
+        <p>I initially joined the lab through my pre-med track, but the work I did was heavily technical — I used MATLAB
+          to scrape data from Reddit, building a machine learning model that could predict withdrawal struggles based on
+          user posts. It was my first real taste of applying computational methods to solve real-world problems, and it
+          lit a spark. It showed me that technology wasn’t just a tool — it was a bridge between disciplines, a way to
+          innovate in fields I deeply cared about.</p>
+        <p>Encouraged by that experience, I pivoted my academic focus, eventually double majoring in Computer Science
+          and Applied Mathematics while completing a minor in Neuroscience. Even as I transitioned away from pre-med, my
+          passion for understanding the brain never faded — a passion that continues to fuel my curiosity today.</p>
       </div>
-      <button type="submit">Submit</button>
-    </form>
+    </section>
+
+    <!-- Left Text / Right Image Section -->
+    <section class="about-section">
+      <div class="about-text">
+        <p>In fact, it was my background in neuroscience that initially sparked my fascination with artificial
+          intelligence. Neural networks, the cornerstone of modern AI, felt like a natural extension of my academic
+          interests. To this day, I still enjoy diving into neuroscience podcasts and staying curious about how
+          biological intelligence informs machine learning.</p>
+        <p>After graduating, I spent several years as a Software Engineer at Microsoft, specializing in iOS development
+          for Microsoft Teams. During my time there, I honed my technical skills, worked on large-scale mobile
+          applications, and collaborated with brilliant teams across the company. It was a formative experience that
+          allowed me to grow not only as an engineer but also as a problem-solver and teammate.</p>
+        <p>However, my experience in the industry also made me realize how much more there was to learn — especially in
+          the fields of machine learning and AI, which had always been close to my heart. I found myself craving a
+          deeper, more structured understanding of these disciplines beyond what I had explored in undergrad.</p>
+        <p>That desire led me to pursue a graduate degree in Computer Science at Northeastern University, specializing
+          in Machine Learning and AI. It’s a decision fueled by curiosity, passion, and a drive to keep pushing the
+          boundaries of what I can create.</p>
+        <p>Outside of engineering, I still believe deeply in creativity and storytelling — passions that fuel my love
+          for photography, YouTube content creation, and design. Whether I’m building intelligent systems or capturing
+          moments behind a camera lens, my goal is the same: to create meaningful, empowering experiences for others.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="images/at_microsoft.jpg" alt="Photo of me at Microsoft">
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://github.com" target="_blank">GitHub</a>
+  <footer class="fixed-footer">
+    <a href="https://www.linkedin.com/in/siqi-christine-z-862b88119/" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/itschristinezhou/" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/@christinezhou" target="_blank">YouTube</a>
+    <a href="https://github.com/cchristinezhou" target="_blank">GitHub</a>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
