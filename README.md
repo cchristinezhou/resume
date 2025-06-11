@@ -40,8 +40,14 @@ Add screenshots below showing,
 
 Update the README to answer the following questions:
 
- 1. What was your experience like using generative AI with your wireframes?
- 2. What specific feedback did the career services people give you about your resume?
- 3. What aspects of this project did you find particularly challenging and why? Explain how you overcame them.
- 4. Explain how you created a custom favicon for your page.
- 5. Write a short reflection about what you've learned in this class so far. Think about all the technologies we've used, the activities you've done, the programs you've made, and how far you've come. Please give me your honest thoughts as I'll use this to update the course going forward.
+ ## What was your experience like using generative AI with your wireframes?
+ It was overall great. Took a few trials and errors to get the AI to understand my vision but it definitely avoided a lot of busywork once the AI understood me. 
+ ## What specific feedback did the career services people give you about your resume?
+ They suggested me to add more relevant coursework and side projects I've done. Also told me to tweak my experience descriptions so that it's more impact-focused. 
+ ## What aspects of this project did you find particularly challenging and why? Explain how you overcame them.
+ I found it challenging to implement a variety of text layouts (two columns for example). I had to read up on how to use "flex" to make the text and image lay out side by side to achieve that look.
+ I also had to figure out how to implement the sticky header/footer. Turns out it was quite simple - just need to set position to "fixed". 
+ ## Explain how you created a custom favicon for your page.
+ Luckily I have an active Canva subscription. I went to Canva, and searched for personal website icons and built my own icon upon one of the templates I liked. Then I used a free online icon maker to get the smaller web-friendly favicon file. Then I dragged the file into my images folder and added a `<link rel="icon" href="images/web-favicon.png" type="image/x-icon">` line to my html files. 
+ ## Write a short reflection about what you've learned in this class so far. Think about all the technologies we've used, the activities you've done, the programs you've made, and how far you've come. Please give me your honest thoughts as I'll use this to update the course going forward.
+ I've learned a lot about how to program website UI, how to make them interactive, and how to talk to servers. I also refreshed my understanding on Javascript and HTML through the lecture slides (theoretical foundation is always good before hands-on programming in my opinion). I particularly enjoyed this assignment as it is extremely practical for our future professional careers to have a resume website out - I've been wanting to do that for a long time but always procrastinated so I thought this was ingenuis. I would say before this course, I was internship-ready for web development - if someone gave me a task to implement something that's already on a website, I would probably be able to do it, but I wasn't able to start from scratch completely. I think this course has filled that gap for me and deepened my understanding of how to build a website from the ground up. 
