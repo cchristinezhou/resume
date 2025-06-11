@@ -35,17 +35,21 @@ Purchase a domain name for your site and link it to your GitHub pages. I've used
 Add screenshots below showing,
 
 * Your app running on GitHub Pages
+![app_running](images/for_readme/web_working.png)
 * Your html validation
+![html_verified](images/for_readme/html_verified.png) 
+(This shows for all my HTML files. I only uploaded one because the verification pages look identical.)
 * Your view testing
+![view_testing](images/for_readme/view_testing_passed.png)
 
-Update the README to answer the following questions:
-
+# Reflection Questions:
  ## What was your experience like using generative AI with your wireframes?
  It was overall great. Took a few trials and errors to get the AI to understand my vision but it definitely avoided a lot of busywork once the AI understood me. 
  ## What specific feedback did the career services people give you about your resume?
  They suggested me to add more relevant coursework and side projects I've done. Also told me to tweak my experience descriptions so that it's more impact-focused. 
  ## What aspects of this project did you find particularly challenging and why? Explain how you overcame them.
  I found it challenging to implement a variety of text layouts (two columns for example). I had to read up on how to use "flex" to make the text and image lay out side by side to achieve that look.
+ 
  I also had to figure out how to implement the sticky header/footer. Turns out it was quite simple - just need to set position to "fixed". 
  ## Explain how you created a custom favicon for your page.
  Luckily I have an active Canva subscription. I went to Canva, and searched for personal website icons and built my own icon upon one of the templates I liked. Then I used a free online icon maker to get the smaller web-friendly favicon file. Then I dragged the file into my images folder and added a `<link rel="icon" href="images/web-favicon.png" type="image/x-icon">` line to my html files. 
