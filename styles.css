@@ -352,6 +352,12 @@ input:checked+.slider:before {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Make the parent container allow full-width children */
+.about-main {
+  overflow-x: visible; /* Allow content to extend beyond container */
+}
+
+/* More aggressive full-width approach */
 .full-width {
   width: 100vw;
   position: relative;
@@ -360,11 +366,12 @@ input:checked+.slider:before {
   margin-left: -50vw;
   margin-right: -50vw;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .full-width img {
   width: 100%;
-  max-width: none; /* Remove the max-width: 1200px constraint */
+  max-width: none !important; /* Force override any max-width constraints */
   height: auto;
   display: block;
   margin: 0;
