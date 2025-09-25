@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transpose X Case Study | Christine Zhou</title>
+  <link rel="icon" href="images/web-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Metal&family=Prata&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,57 +19,94 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
+      <!-- Dark Mode Toggle -->
+      <div class="dark-mode-toggle">
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider round"></span>
+        </label>
+        <span class="dark-mode-label">Dark Mode (D)</span>
+      </div>
     </nav>
   </header>
 
-  <main class="projects-main">
-    <div class="case-study-section">
-      <h1>Transpose X: Music Transcription Case Study</h1>
-      <p><em>Proof-of-Concept Mobile App with OMR Integration</em></p>
+  <main class="about-main">
+    <!-- Page Title -->
+    <h1 class="about-title">Transpose X Case Study</h1>
 
-      <h2>Problem</h2>
-      <p>Musicians often need to digitize sheet music, but manual transcription is tedious and error-prone.</p>
+    <!-- Full Width Intro -->
+    <section class="intro-section">
+      <h2 class="visually-hidden">Introduction</h2>
+      <div class="intro-text">
+        <p><em>Proof-of-Concept Mobile App with Optical Music Recognition (OMR) Integration</em></p>
+        <p>Transpose X is a prototype application I designed to help musicians digitize and manipulate sheet music. 
+        The project combined <strong>iOS mobile development</strong> with a <strong>Node.js backend</strong> 
+        integrated with the <strong>Audiveris OMR engine</strong> to convert images into editable MusicXML files.</p>
+      </div>
+    </section>
 
-      <h2>Solution</h2>
-      <p>Built a prototype iOS app with a Node.js backend that integrates <strong>Audiveris OMR</strong> to convert sheet music images into editable MusicXML files.</p>
+    <!-- Left Image / Right Text -->
+    <section class="about-section">
+      <div class="about-image">
+        <img src="images/transposex_ui.png" alt="Screenshot of Transpose X mobile UI">
+      </div>
+      <div class="about-text">
+        <h3>Problem</h3>
+        <p>Musicians often need to digitize sheet music for practice, editing, or transposition. Manual transcription 
+        is time-consuming and error-prone, with no widely accessible tools available on mobile.</p>
 
-      <h2>Technologies</h2>
-      <ul>
-        <li>Swift (iOS app)</li>
-        <li>Node.js + Express (backend)</li>
-        <li>Audiveris (Java OMR engine)</li>
-        <li>Docker for backend orchestration</li>
-      </ul>
+        <h3>Solution</h3>
+        <p>Transpose X processes an uploaded photo of sheet music, runs it through an OMR backend, and 
+        outputs <strong>MusicXML</strong> that can be edited or transposed in any desired key.</p>
+      </div>
+    </section>
 
-      <h2>Challenges</h2>
-      <ul>
-        <li>Java version compatibility with Audiveris.</li>
-        <li>Native library integration in a Dockerized cloud environment.</li>
-        <li>Handling file uploads and efficient processing pipelines.</li>
-      </ul>
+    <!-- Left Text / Right Image -->
+    <section class="about-section">
+      <div class="about-text">
+        <h3>Technologies</h3>
+        <ul>
+          <li>Swift (iOS app)</li>
+          <li>Node.js + Express backend</li>
+          <li>Audiveris OMR (Java-based)</li>
+          <li>Dockerized backend deployment</li>
+        </ul>
 
-      <h2>Results</h2>
-      <ul>
-        <li>Demonstrated full workflow: capture sheet music → backend OMR → export MusicXML.</li>
-        <li>Scalable Dockerized backend deployable to cloud services.</li>
-        <li>Functional prototype UI with upload, progress tracking, and export features.</li>
-      </ul>
+        <h3>Challenges</h3>
+        <ul>
+          <li>Resolving Java version incompatibilities with Audiveris.</li>
+          <li>Integrating native libraries into a cloud-ready Docker environment.</li>
+          <li>Managing file uploads and processing pipelines efficiently.</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="images/transposex_architecture.png" alt="Transpose X architecture diagram">
+      </div>
+    </section>
 
-      <h2>Proof Points</h2>
-      <ul>
-        <li>📹 Demo video (link placeholder)</li>
-        <li>🖼️ Screenshots of the mobile UI</li>
-        <li>⚙️ Code snippets (Swift + Node.js)</li>
-        <li>📊 Architecture diagram</li>
-      </ul>
+    <!-- Full Width Results -->
+    <section class="intro-section">
+      <div class="intro-text">
+        <h3>Results</h3>
+        <ul>
+          <li>Functional prototype that demonstrates full workflow: image → backend → MusicXML output.</li>
+          <li>Responsive iOS UI with upload, progress tracking, and export features.</li>
+          <li>Proof of technical feasibility for real-time mobile OMR integration.</li>
+        </ul>
 
-      <blockquote>
-        <em>“Built a proof-of-concept music transcription app demonstrating full-stack mobile development, backend orchestration, and integration of complex OMR libraries.”</em>
-      </blockquote>
-    </div>
+        <h3>Proof Points</h3>
+        <ul>
+          <li>📹 Demo video (placeholder link)</li>
+          <li>🖼️ Screenshots of the app interface</li>
+          <li>⚙️ Code snippets (Swift + Node.js)</li>
+          <li>📊 Architecture diagram</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="fixed-footer">
@@ -74,6 +115,7 @@
     <a href="https://www.youtube.com/@christinezhou" target="_blank">YouTube</a>
     <a href="https://github.com/cchristinezhou" target="_blank">GitHub</a>
   </footer>
-</body>
 
+  <script src="script.js"></script>
+</body>
 </html>
