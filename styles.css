@@ -330,38 +330,45 @@ input:checked+.slider:before {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.full-width img {
-  width: 100%;       
-  max-width: 1200px;  
-  display: block;
-  margin: 2rem auto;  
-}
-
 .two-column {
   display: flex;
   align-items: flex-start;
-  gap: 2rem; /* space between video and text */
+  gap: 2rem;
 }
 
-.about-video, .about-text {
-  flex: 1; /* each takes up half the space */
-}
-
-.about-video video {
-  width: 100%;     /* fills its half-column */
-  height: auto;    /* keeps aspect ratio */
-  border-radius: 8px; /* optional, rounded edges */
+.about-video {
+  flex: 0 0 40%; /* Video takes 40% width instead of 50% */
+  max-width: 40%;
 }
 
 .about-text {
-  flex: 1;
+  flex: 1; /* Text takes remaining 60% */
 }
 
-.intro-text p,
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
+.about-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 2rem;
+}
+
+.full-width img {
+  width: 100%;
+  max-width: none; /* Remove the max-width: 1200px constraint */
+  height: auto;
+  display: block;
+  margin: 0;
+  object-fit: contain;
 }
 
 /* === Resume Page Layout === */
