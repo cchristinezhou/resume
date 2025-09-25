@@ -39,43 +39,46 @@
     <!-- Page Title -->
     <h1 class="about-title">Transpose X Case Study</h1>
 
-    <!-- Full Width Intro -->
+    <!-- Intro -->
     <section class="intro-section">
-      <h2 class="visually-hidden">Introduction</h2>
       <div class="intro-text">
         <p><em>Cross-Platform Mobile App with Optical Music Recognition (OMR)</em></p>
-        <p><strong>Transpose X</strong> is a fully working application designed to help musicians digitize and manipulate sheet music. 
-          The project combines a <strong>Flutter-based mobile frontend</strong> with a <strong>Node.js backend</strong> powered by 
-          the <strong>Audiveris OMR engine</strong> to transform images of sheet music into editable MusicXML files.</p>
-        <p>
-          🔗 <a href="https://github.com/cchristinezhou/transposeX?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">
-            View Full GitHub Repository
-          </a>
-        </p>
+        <p><strong>Transpose X</strong> is a fully working application designed to help musicians
+          digitize and manipulate sheet music. The project combines a <strong>Flutter-based mobile frontend</strong>
+          with a <strong>Node.js backend</strong> powered by the <strong>Audiveris OMR engine</strong> to
+          transform images of sheet music into editable MusicXML files.</p>
       </div>
     </section>
 
-    <!-- Demo Video -->
-    <section class="about-section">
-      <div class="about-image full-width">
-        <video controls>
+    <!-- Video (Left) + Problem/Solution (Right) -->
+    <section class="about-section two-column">
+      <div class="about-video">
+        <video controls width="100%">
           <source src="videos/transposex_demo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
-    </section>
-
-    <!-- Problem / Solution -->
-    <section class="about-section">
       <div class="about-text">
         <h3>Problem</h3>
-        <p>Musicians often need to digitize sheet music for practice, editing, or transposition. 
-          Manual transcription is slow and error-prone, with few modern mobile solutions available.</p>
+        <p>Musicians often need to digitize sheet music for practice, editing, or transposition. Manual transcription
+          is slow and error-prone, with few modern mobile solutions available.</p>
 
         <h3>Solution</h3>
-        <p><strong>Transpose X</strong> enables users to snap a photo of sheet music, automatically convert it to 
-          <strong>MusicXML</strong>, and instantly transpose it into any key — all within a clean mobile app interface. 
-          The app demonstrates how professional-grade OMR and custom-built algorithms can run seamlessly on consumer devices.</p>
+        <p>Transpose X enables users to snap a photo of sheet music, automatically convert it to
+          <strong>MusicXML</strong>, and instantly transpose it into any key — all within a clean mobile app interface.
+          The prototype demonstrates how professional-grade OMR and custom-built algorithms can run seamlessly on a
+          consumer-facing app.
+        </p>
+      </div>
+    </section>
+
+    <!-- Hi-Fi Wireframe (Full Width) -->
+    <section class="intro-section">
+      <div class="intro-text">
+        <h3>High-Fidelity Wireframes</h3>
+      </div>
+      <div class="about-image full-width">
+        <img src="images/transposex_wireframes.png" alt="Transpose X high-fidelity wireframes">
       </div>
     </section>
 
@@ -98,14 +101,7 @@
         </p>
       </div>
       <div class="about-image">
-        <img src="images/transposex_workflow.png" alt="Transpose X workflow diagram">
-      </div>
-    </section>
-
-    <!-- Hi-Fi Wireframes -->
-    <section class="about-section">
-      <div class="about-image full-width">
-        <img src="images/transposex_wireframes.png" alt="Transpose X high-fidelity wireframes">
+        <img src="images/transposex_architecture.png" alt="Transpose X workflow diagram">
       </div>
     </section>
 
@@ -114,11 +110,21 @@
       <div class="intro-text">
         <h3>Results</h3>
         <p>
-          Fully functional prototype demonstrating end-to-end workflow: photo → recognition → MusicXML → transposed output<br>
+          Fully functional prototype demonstrating end-to-end workflow: photo → recognition → MusicXML → transposed
+          output<br>
           Responsive mobile UI with upload, progress tracking, and export features<br>
           Showcases feasibility of <strong>real-time OMR and transposition</strong> on consumer devices<br>
-          Decision not to deploy to App Store was intentional — to avoid recurring backend billing costs, while still 
+          Decision not to deploy to App Store was intentional — to avoid recurring backend billing costs, while still
           proving full technical viability
+        </p>
+
+        <h3>Proof Points</h3>
+        <p>
+          📹 Demo video showing full workflow<br>
+          🖼️ High-fidelity wireframes<br>
+          ⚙️ Full codebase on <a href="https://github.com/cchristinezhou/transposeX?tab=readme-ov-file"
+            target="_blank">GitHub</a><br>
+          📊 Workflow diagram
         </p>
       </div>
     </section>
@@ -133,4 +139,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
