@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Metal&family=Prata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Metal&family=Prata&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -42,45 +43,50 @@
     <section class="intro-section">
       <h2 class="visually-hidden">Introduction</h2>
       <div class="intro-text">
-        <p><em>Proof-of-Concept Mobile App with Optical Music Recognition (OMR) Integration</em></p>
-        <p>Transpose X is a prototype application I designed to help musicians digitize and manipulate sheet music. 
-        The project combined <strong>iOS mobile development</strong> with a <strong>Node.js backend</strong> 
-        integrated with the <strong>Audiveris OMR engine</strong> to convert images into editable MusicXML files.</p>
+        <p><em>Cross-Platform Mobile App with Optical Music Recognition (OMR)</em></p>
+        <p><strong>Transpose X</strong> is a fully working proof-of-concept application designed to help musicians
+          digitize and manipulate sheet music. The project combines a <strong>Flutter-based mobile frontend</strong>
+          with a <strong>Node.js backend</strong> powered by the <strong>Audiveris OMR engine</strong> to
+          transform images of sheet music into editable MusicXML files.</p>
       </div>
     </section>
 
-    <!-- Left Image / Right Text -->
+    <!-- Problem / Solution -->
     <section class="about-section">
       <div class="about-image">
         <img src="images/transposex_ui.png" alt="Screenshot of Transpose X mobile UI">
       </div>
       <div class="about-text">
         <h3>Problem</h3>
-        <p>Musicians often need to digitize sheet music for practice, editing, or transposition. Manual transcription 
-        is time-consuming and error-prone, with no widely accessible tools available on mobile.</p>
+        <p>Musicians often need to digitize sheet music for practice, editing, or transposition. Manual transcription
+          is slow and error-prone, with few modern mobile solutions available.</p>
 
         <h3>Solution</h3>
-        <p>Transpose X processes an uploaded photo of sheet music, runs it through an OMR backend, and 
-        outputs <strong>MusicXML</strong> that can be edited or transposed in any desired key.</p>
+        <p>Transpose X enables users to snap a photo of sheet music, automatically convert it to
+          <strong>MusicXML</strong>, and instantly transpose it into any key — all within a clean mobile app interface.
+          The prototype demonstrates how professional-grade OMR and custom-built algorithms can run seamlessly on a
+          consumer-facing app.
+        </p>
       </div>
     </section>
 
-    <!-- Left Text / Right Image -->
+    <!-- Technologies / Challenges -->
     <section class="about-section">
       <div class="about-text">
         <h3>Technologies</h3>
         <ul>
-          <li>Swift (iOS app)</li>
-          <li>Node.js + Express backend</li>
-          <li>Audiveris OMR (Java-based)</li>
-          <li>Dockerized backend deployment</li>
+          <li><strong>Flutter</strong> — cross-platform mobile app for iOS & Android</li>
+          <li><strong>Node.js + Express</strong> backend for processing</li>
+          <li><strong>Audiveris OMR</strong> for sheet music recognition</li>
+          <li><strong>Custom transposition engine</strong> written from scratch</li>
         </ul>
 
         <h3>Challenges</h3>
         <ul>
-          <li>Resolving Java version incompatibilities with Audiveris.</li>
-          <li>Integrating native libraries into a cloud-ready Docker environment.</li>
-          <li>Managing file uploads and processing pipelines efficiently.</li>
+          <li>Resolving <strong>Java version incompatibilities</strong> with Audiveris.</li>
+          <li>Integrating OMR results into a <strong>MusicXML pipeline</strong> usable across platforms.</li>
+          <li>Designing and implementing <strong>custom transposition logic</strong> to shift musical notation in real
+            time.</li>
         </ul>
       </div>
       <div class="about-image">
@@ -88,21 +94,24 @@
       </div>
     </section>
 
-    <!-- Full Width Results -->
+    <!-- Results -->
     <section class="intro-section">
       <div class="intro-text">
         <h3>Results</h3>
         <ul>
-          <li>Functional prototype that demonstrates full workflow: image → backend → MusicXML output.</li>
-          <li>Responsive iOS UI with upload, progress tracking, and export features.</li>
-          <li>Proof of technical feasibility for real-time mobile OMR integration.</li>
+          <li>Fully functional prototype demonstrating end-to-end workflow: photo → recognition → MusicXML → transposed
+            output.</li>
+          <li>Responsive mobile UI with upload, progress tracking, and export features.</li>
+          <li>Showcases feasibility of <strong>real-time OMR and transposition</strong> on consumer devices.</li>
+          <li>Decision not to deploy to App Store was intentional — to avoid recurring backend billing costs, while
+            still proving full technical viability.</li>
         </ul>
 
         <h3>Proof Points</h3>
         <ul>
-          <li>📹 Demo video (placeholder link)</li>
+          <li>📹 Demo video showing full workflow</li>
           <li>🖼️ Screenshots of the app interface</li>
-          <li>⚙️ Code snippets (Swift + Node.js)</li>
+          <li>⚙️ Code snippets (Flutter + Node.js)</li>
           <li>📊 Architecture diagram</li>
         </ul>
       </div>
@@ -118,4 +127,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
