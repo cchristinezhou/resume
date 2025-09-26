@@ -291,6 +291,7 @@ input:checked+.slider:before {
   max-width: 1200px;
   margin: 0 auto;
   padding: 120px 20px 100px;
+  overflow-x: visible;
 }
 
 .about-title {
@@ -313,7 +314,12 @@ input:checked+.slider:before {
   align-items: stretch;
   justify-content: center;
   gap: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 3rem;
+}
+
+.about-section .about-text {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-image {
@@ -337,12 +343,12 @@ input:checked+.slider:before {
 }
 
 .about-video {
-  flex: 0 0 40%; /* Video takes 40% width instead of 50% */
+  flex: 0 0 40%;
   max-width: 40%;
 }
 
 .about-text {
-  flex: 1; /* Text takes remaining 60% */
+  flex: 1;
 }
 
 .about-video video {
@@ -352,12 +358,27 @@ input:checked+.slider:before {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Make the parent container allow full-width children */
-.about-main {
-  overflow-x: visible; /* Allow content to extend beyond container */
+/* Full-width section outside main container */
+.full-width-section {
+  width: 100%;
+  margin: 3rem 0;
+  background: inherit;
 }
 
-/* More aggressive full-width approach */
+.full-width-section .intro-text {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.full-width-section .intro-text h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .full-width {
   width: 100vw;
   position: relative;
@@ -365,17 +386,32 @@ input:checked+.slider:before {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .full-width img {
-  width: 100%;
-  max-width: none !important; /* Force override any max-width constraints */
+  width: calc(100% - 4rem);
+  max-width: none;
   height: auto;
   display: block;
-  margin: 0;
+  margin: 0 auto;
+  padding: 0 2rem;
   object-fit: contain;
+  box-sizing: border-box;
+}
+
+/* Consistent font sizing - model after Problem/Solution section */
+.about-text h3, .intro-text h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.about-text p, .intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
 /* === Resume Page Layout === */
@@ -695,7 +731,10 @@ body.dark-mode .resume-item p,
 body.dark-mode .resume-skills p,
 body.dark-mode .project-title h2,
 body.dark-mode .project-title p,
-body.dark-mode .project-description li {
+body.dark-mode .project-description li,
+body.dark-mode .about-text h3,
+body.dark-mode .intro-text h3,
+body.dark-mode .full-width-section .intro-text h3 {
   color: #ffffff;
 }
 

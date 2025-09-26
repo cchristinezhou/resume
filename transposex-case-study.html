@@ -1,370 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+</main>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transpose X Case Study | Christine Zhou</title>
-  <link rel="icon" href="images/web-favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Metal&family=Prata&display=swap"
-    rel="stylesheet">
-  <style>
-    /* Updated CSS for better layout */
-    .two-column {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .about-video {
-      flex: 0 0 40%; /* Video takes 40% width, doesn't grow or shrink */
-      max-width: 40%;
-    }
-    
-    .about-text {
-      flex: 1; /* Text takes remaining 60% */
-    }
-    
-    .about-video video {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    
-    /* Full-width section outside main container */
-    .full-width-section {
-      width: 100%;
-      margin: 3rem 0;
-      background: inherit;
-    }
+<!-- Hi-Fi Wireframe (Full Width) - Outside main container -->
+<section class="full-width-section">
+  <div class="intro-text">
+    <h3>High-Fidelity Wireframes</h3>
+  </div>
+  <div class="full-width">
+    <img src="images/transposex_wireframes.png" alt="Transpose X high-fidelity wireframes">
+  </div>
+</section>
 
-    .full-width-section .intro-text {
-      max-width: 1200px;
-      margin: 0 auto 2rem;
-      padding: 0 20px;
-      text-align: center;
-    }
+<!-- Workflow Diagram (Full Width) - Outside main container -->
+<section class="full-width-section">
+  <div class="intro-text">
+    <h3>Workflow Diagram</h3>
+  </div>
+  <div class="full-width">
+    <img src="images/transposex_workflow.png" alt="Transpose X workflow diagram">
+  </div>
+</section>
 
-    .full-width-section .intro-text h3 {
-      color: #333;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
+<main class="about-main">
+  <!-- Technologies / Challenges -->
+  <section class="about-section">
+    <div class="about-text">
+      <h3>Technologies</h3>
+      <p>
+        <strong>Flutter</strong> — cross-platform mobile app for iOS & Android<br>
+        <strong>Node.js + Express</strong> backend for processing<br>
+        <strong>Audiveris OMR</strong> for sheet music recognition<br>
+        <strong>Custom transposition engine</strong> written from scratch
+      </p>
 
-    .full-width {
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-    }
-
-    .full-width img {
-      width: 100%;
-      max-width: none;
-      height: auto;
-      display: block;
-      margin: 0;
-      object-fit: contain;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .two-column {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      
-      .about-video {
-        flex: none;
-        max-width: 100%;
-      }
-      
-      .full-width {
-        width: 100%;
-        position: static;
-        left: auto;
-        right: auto;
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
-    
-    /* Basic styling for the page */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    
-    .fixed-header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-    
-    .nav-links a.active {
-      color: #007bff;
-    }
-    
-    .dark-mode-toggle {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-    }
-    
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      transition: .4s;
-    }
-    
-    .slider.round {
-      border-radius: 34px;
-    }
-    
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      transition: .4s;
-      border-radius: 50%;
-    }
-    
-    input:checked + .slider {
-      background-color: #007bff;
-    }
-    
-    input:checked + .slider:before {
-      transform: translateX(26px);
-    }
-    
-    .about-main {
-      padding: 100px 2rem 100px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .about-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-    
-    .intro-section, .about-section {
-      margin-bottom: 3rem;
-    }
-    
-    .intro-text p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    
-    .about-text h3 {
-      color: #333;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-    
-    .about-text p {
-      margin-bottom: 1rem;
-      color: #666;
-    }
-    
-    .about-image {
-      flex: 1;
-      text-align: center;
-    }
-    
-    .about-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    
-    .fixed-footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-    
-    .fixed-footer a {
-      color: white;
-      text-decoration: none;
-    }
-    
-    .fixed-footer a:hover {
-      color: #007bff;
-    }
-  </style>
-</head>
-
-<body>
-  <header class="fixed-header">
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-
-      <!-- Dark Mode Toggle -->
-      <div class="dark-mode-toggle">
-        <label class="switch">
-          <input type="checkbox" id="dark-mode-toggle">
-          <span class="slider round"></span>
-        </label>
-        <span class="dark-mode-label">Dark Mode (D)</span>
-      </div>
-    </nav>
-  </header>
-
-  <main class="about-main">
-    <!-- Page Title -->
-    <h1 class="about-title">Transpose X Case Study</h1>
-
-    <!-- Intro -->
-    <section class="intro-section">
-      <div class="intro-text">
-        <p><em>Cross-Platform Mobile App with Optical Music Recognition (OMR)</em></p>
-        <p><strong>Transpose X</strong> is a fully working application designed to help musicians
-          digitize and manipulate sheet music. The project combines a <strong>Flutter-based mobile frontend</strong>
-          with a <strong>Node.js backend</strong> powered by the <strong>Audiveris OMR engine</strong> to
-          transform images of sheet music into editable MusicXML files.</p>
-      </div>
-    </section>
-
-    <section class="about-section two-column">
-      <div class="about-video">
-        <video controls>
-          <source src="videos/transposex_demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="about-text">
-        <h3>Problem</h3>
-        <p>Musicians often need to digitize sheet music for practice, editing, or transposition. Manual transcription
-          is slow and error-prone, with few modern mobile solutions available.</p>
-
-        <h3>Solution</h3>
-        <p><strong>Transpose X</strong> enables users to snap a photo of sheet music, automatically convert it to
-          <strong>MusicXML</strong>, and instantly transpose it into any key — all within a clean mobile app interface.
-          The prototype demonstrates how professional-grade OMR and custom-built algorithms can run seamlessly on a
-          consumer-facing app.
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Hi-Fi Wireframe (Full Width) - Outside main container -->
-  <section class="full-width-section">
-    <div class="intro-text">
-      <h3>High-Fidelity Wireframes</h3>
-    </div>
-    <div class="full-width">
-      <img src="images/transposex_wireframes.png" alt="Transpose X high-fidelity wireframes">
+      <h3>Challenges</h3>
+      <p>
+        Resolving <strong>Java version incompatibilities</strong> with Audiveris<br>
+        Integrating OMR results into a <strong>MusicXML pipeline</strong> usable across platforms<br>
+        Designing and implementing <strong>custom transposition logic</strong> to shift musical notation in real time
+      </p>
     </div>
   </section>
-
-  <main class="about-main">
-    <!-- Technologies / Challenges -->
-    <section class="about-section">
-      <div class="about-text">
-        <h3>Technologies</h3>
-        <p>
-          <strong>Flutter</strong> — cross-platform mobile app for iOS & Android<br>
-          <strong>Node.js + Express</strong> backend for processing<br>
-          <strong>Audiveris OMR</strong> for sheet music recognition<br>
-          <strong>Custom transposition engine</strong> written from scratch
-        </p>
-
-        <h3>Challenges</h3>
-        <p>
-          Resolving <strong>Java version incompatibilities</strong> with Audiveris<br>
-          Integrating OMR results into a <strong>MusicXML pipeline</strong> usable across platforms<br>
-          Designing and implementing <strong>custom transposition logic</strong> to shift musical notation in real time
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="images/transposex_workflow.png" alt="Transpose X workflow diagram">
-      </div>
-    </section>
-
-    <!-- Results -->
-    <section class="intro-section">
-      <div class="intro-text">
-        <h3>Results</h3>
-        <p>
-          Fully functional prototype demonstrating end-to-end workflow: photo → recognition → MusicXML → transposed
-          output<br>
-          Responsive mobile UI with upload, progress tracking, and export features<br>
-          Showcases feasibility of <strong>real-time OMR and transposition</strong> on consumer devices<br>
-          Decision not to deploy to App Store was intentional — to avoid recurring backend billing costs, while still
-          proving full technical
+  
+  <!-- Rest of your content continues here -->
