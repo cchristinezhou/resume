@@ -35,6 +35,19 @@
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+
+    /* Tech and Challenges two-column layout */
+    .tech-challenges-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      padding: 0 2rem;
+    }
+
+    .tech-column, .challenges-column {
+      min-height: 200px;
+    }
     
     /* Full-width section outside main container */
     .full-width-section {
@@ -86,6 +99,12 @@
       .about-video {
         flex: none;
         max-width: 100%;
+      }
+
+      .tech-challenges-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
       }
       
       .full-width {
@@ -326,46 +345,76 @@
   </main>
 
   <!-- Hi-Fi Wireframe (Full Width) - Outside main container -->
-<section class="full-width-section">
-  <div class="intro-text">
-    <h3>High-Fidelity Wireframes</h3>
-  </div>
-  <div class="full-width">
-    <img src="images/transposex_wireframes.png" alt="Transpose X high-fidelity wireframes">
-  </div>
-</section>
-
-<!-- Workflow Diagram (Full Width) - Outside main container -->
-<section class="full-width-section">
-  <div class="intro-text">
-    <h3>Workflow Diagram</h3>
-  </div>
-  <div class="full-width">
-    <img src="images/transposex_workflow.png" alt="Transpose X workflow diagram">
-  </div>
-</section>
-
-<main class="about-main">
-  <!-- Technologies / Challenges -->
-  <section class="about-section">
-    <div class="about-text">
-      <h3>Technologies</h3>
-      <p>
-        <strong>Flutter</strong> — cross-platform mobile app for iOS & Android<br>
-        <strong>Node.js + Express</strong> backend for processing<br>
-        <strong>Audiveris OMR</strong> for sheet music recognition<br>
-        <strong>Custom transposition engine</strong> written from scratch
-      </p>
-
-      <h3>Challenges</h3>
-      <p>
-        Resolving <strong>Java version incompatibilities</strong> with Audiveris<br>
-        Integrating OMR results into a <strong>MusicXML pipeline</strong> usable across platforms<br>
-        Designing and implementing <strong>custom transposition logic</strong> to shift musical notation in real time
-      </p>
+  <section class="full-width-section">
+    <div class="intro-text">
+      <h3>High-Fidelity Wireframes</h3>
+    </div>
+    <div class="full-width">
+      <img src="images/transposex_wireframes.png" alt="Transpose X high-fidelity wireframes">
     </div>
   </section>
-</main>
+
+  <!-- Workflow Diagram (Full Width) - Outside main container -->
+  <section class="full-width-section">
+    <div class="intro-text">
+      <h3>Workflow Diagram</h3>
+    </div>
+    <div class="full-width">
+      <img src="images/transposex_workflow.png" alt="Transpose X workflow diagram">
+    </div>
+  </section>
+
+  <main class="about-main">
+    <!-- Technologies / Challenges - Two Column Layout -->
+    <section class="tech-challenges-section">
+      <div class="tech-column">
+        <div class="about-text">
+          <h3>Technologies</h3>
+          <p>
+            <strong>Flutter</strong> — cross-platform mobile app for iOS & Android<br>
+            <strong>Node.js + Express</strong> backend for processing<br>
+            <strong>Audiveris OMR</strong> for sheet music recognition<br>
+            <strong>Custom transposition engine</strong> written from scratch
+          </p>
+        </div>
+      </div>
+      
+      <div class="challenges-column">
+        <div class="about-text">
+          <h3>Challenges</h3>
+          <p>
+            Resolving <strong>Java version incompatibilities</strong> with Audiveris<br>
+            Integrating OMR results into a <strong>MusicXML pipeline</strong> usable across platforms<br>
+            Designing and implementing <strong>custom transposition logic</strong> to shift musical notation in real time
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="intro-section">
+      <div class="intro-text">
+        <h3>Results</h3>
+        <p>
+          Fully functional prototype demonstrating end-to-end workflow: photo → recognition → MusicXML → transposed
+          output<br>
+          Responsive mobile UI with upload, progress tracking, and export features<br>
+          Showcases feasibility of <strong>real-time OMR and transposition</strong> on consumer devices<br>
+          Decision not to deploy to App Store was intentional — to avoid recurring backend billing costs, while still
+          proving full technical viability
+        </p>
+
+        <h3>Proof Points</h3>
+        <p>
+          📹 Demo video showing full workflow<br>
+          🖼️ High-fidelity wireframes<br>
+          ⚙️ Full codebase on <a href="https://github.com/cchristinezhou/transposeX?tab=readme-ov-file"
+            target="_blank">GitHub</a><br>
+          📊 Workflow diagram
+        </p>
+      </div>
+    </section>
+  </main>
 
   <footer class="fixed-footer">
     <a href="https://www.linkedin.com/in/siqi-christine-z-862b88119/" target="_blank">LinkedIn</a>
@@ -373,3 +422,8 @@
     <a href="https://www.youtube.com/@christinezhou" target="_blank">YouTube</a>
     <a href="https://github.com/cchristinezhou" target="_blank">GitHub</a>
   </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
