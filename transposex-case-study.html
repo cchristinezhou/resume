@@ -42,7 +42,10 @@
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       margin-bottom: 3rem;
-      padding: 0 2rem;
+      padding: 0; /* Remove left/right padding to align with Results */
+      max-width: 1200px; /* Match the main container width */
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .tech-column, .challenges-column {
@@ -232,20 +235,19 @@
       margin-bottom: 3rem;
     }
     
-    .intro-text p {
+    /* Make ALL page content use consistent typography */
+    .intro-text p, .about-text p, .intro-section p {
       font-size: 1.1rem;
-      margin-bottom: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: #333;
     }
     
-    .about-text h3 {
+    .about-text h3, .intro-text h3, .full-width-section .intro-text h3 {
       color: #333;
       margin-bottom: 1rem;
       font-size: 1.5rem;
-    }
-    
-    .about-text p {
-      margin-bottom: 1rem;
-      color: #666;
+      font-weight: 600;
     }
     
     .about-image {
@@ -402,15 +404,6 @@
           Showcases feasibility of <strong>real-time OMR and transposition</strong> on consumer devices<br>
           Decision not to deploy to App Store was intentional — to avoid recurring backend billing costs, while still
           proving full technical viability
-        </p>
-
-        <h3>Proof Points</h3>
-        <p>
-          📹 Demo video showing full workflow<br>
-          🖼️ High-fidelity wireframes<br>
-          ⚙️ Full codebase on <a href="https://github.com/cchristinezhou/transposeX?tab=readme-ov-file"
-            target="_blank">GitHub</a><br>
-          📊 Workflow diagram
         </p>
       </div>
     </section>
