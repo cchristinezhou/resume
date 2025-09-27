@@ -399,6 +399,22 @@ input:checked+.slider:before {
   box-sizing: border-box;
 }
 
+/* Tech and Challenges two-column layout */
+.tech-challenges-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  padding: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-column, .challenges-column {
+  min-height: 200px;
+}
+
 /* Consistent font sizing - model after Problem/Solution section */
 .about-text h3, .intro-text h3 {
   color: #333;
@@ -829,6 +845,34 @@ body.dark-mode .project-title p {
 
 body.dark-mode .project-description li {
   color: #dddddd;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .about-video {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .tech-challenges-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .full-width {
+    width: 100%;
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* === High Contrast Mode === */
