@@ -401,6 +401,7 @@ input:checked+.slider:before {
 
 /* Tech and Challenges two-column layout */
 .tech-challenges-section {
+  font-family: 'Prata", serif';
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
