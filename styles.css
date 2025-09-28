@@ -417,7 +417,7 @@ input:checked+.slider:before {
 
 /* Consistent font sizing - model after Problem/Solution section */
 .about-text h3, .intro-text h3 {
-  font-family: 'Prata", serif';
+  font-family: 'Prata', serif;
   color: #333;
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -425,7 +425,7 @@ input:checked+.slider:before {
 }
 
 .about-text p, .intro-text p {
-  font-family: 'Prata", serif';
+  font-family: 'Prata', serif;
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
